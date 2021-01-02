@@ -1,0 +1,130 @@
+.site-navigation{
+height:65px;
+width:100%;
+background:white;
+display: flex;
+justify-content: space-between;
+color:#444;
+}
+ul{
+    display:flex;
+   margin-block-start: 0;
+   margin-block-end: 0;
+   padding-inline-start: 0;
+    padding-left:0;
+    align-items: center;
+    height:100%;
+    list-style-type: none;
+    margin-right:20px;
+
+}
+.menu-title{
+    font-size:24px;
+    display:flex;
+    margin-left:20px;
+    align-items:center;
+    font-weight:400;
+    cursor:pointer;
+ 
+
+}
+a{
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    font-size:20px;
+    color:#444;
+    &:hover{
+        color:blue;
+    }
+}
+.ion-ios-menu{
+    font-size: 20px;
+    width: 50px;
+    align-items: center;
+    cursor:pointer;
+    display:none;
+    &:hover{
+        color: blue;
+    }
+}
+.menu-container{
+
+    display:flex;
+    align-items:center;
+    margin-right: 30px;
+    .avatar-style{
+        background-color: #f8f9f8;
+        border: 1px #ccc solid;
+    }
+    .menu-avatar-name{
+        font-size: 18px;
+        margin-left:15px;
+    }
+  
+}
+@media screen and (max-width:900px){
+
+    .site-navigation{
+
+        .menu-container{
+            width:300px;
+            background: white;
+            position: absolute;
+            padding:0;
+            padding-left:15px ;
+        height: calc(100% - 65px);
+            top:65px;
+            left:-300px;
+           flex-direction: column-reverse;
+            transition:300ms ease left;
+            align-items: flex-start;
+           
+            
+            a{
+                width:100%;
+                padding:0;
+            
+            }
+            
+            .menu-avatar-container{
+                display: flex;
+                margin:0;
+               padding: 0;
+               .menu-avatar-name{
+                   margin:0;
+                   padding-left:10px;
+                   color:red;
+               }
+            }
+           
+                       ul{
+               flex-direction: column;
+               justify-content: flex-start;
+              
+               padding:0px;
+              
+           }
+           li{
+            height:60px;
+           }
+           ul{
+               padding-top:20px;
+           }
+           ul li{
+               width:100%;
+               justify-content: flex-start;
+               padding-bottom: 10px;
+
+                       }
+                       &.active{
+                        left:0px;
+                        
+                       
+                    }
+        }
+    }
+    .ion-ios-menu{
+        display: flex;
+    }
+}
+
