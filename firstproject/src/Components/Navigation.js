@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import { Avatar } from 'antd'
 
@@ -23,11 +23,12 @@ const navlinks=[
 ]
 
 
-function Navigation() {
+function Navigation({name}) {
+    const [activemenu, setactivemenu] = useState(false)
     return (
         <nav className="site-navigation">
             <span className='menu-title'>  <Link to='/'>Trends</Link></span>
-           <div className='menu-container'>
+           <div className={`menu-container ${activemenu&& 'active'}`}>
             <ul>
               { navlinks.map((nav,index)=>  
               <li key={index}>
@@ -36,9 +37,12 @@ function Navigation() {
 
                }
             </ul>
-            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+            <span className='menu-avatar-container'>
+            <Avatar className='avatar-style' src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={32} />
+           <span className='menu-avatar-name'>{name}</span>
+           </span>
             </div>
-            
+            <i className="ionicons icon ion-ios-menu" onClick={()=>setactivemenu(!activemenu)}/>
         </nav>
     )
 }

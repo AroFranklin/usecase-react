@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.6.0",
     "antd": "^4.9.4",
     "converter": "0.0.5",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

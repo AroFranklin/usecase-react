@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-    <Navigation/>
+    <Navigation name='Franklin'/>
       <Route path='/:pages'>
       <PageRender/>
       </Route>
